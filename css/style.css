@@ -1,0 +1,353 @@
+/* Url for the fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway&display=swap');
+
+
+:root
+{
+    /* Font Size Styling */
+    --title-size: 40px; /* For titles in section 1 and 2  */
+    --small-title-size: 32px; /* For title in section 3 */
+    --text-size: 16px; /* For navbar text, form field texts and paragraphs in every section */
+    --small-text-size: 14px; /* For footer text and quote section */
+    /* End of Font Size Styling */
+
+
+    /* Font Family Styling  */
+    --text-family: 'Open Sans', sans-serif; /* Every other text that isn't a title */
+    --title-family: 'Raleway', sans-serif; /* For titles */
+    /* End of Font Family Styling  */
+
+    /* Colors Styling */
+    --primary-color: hsl(243, 87%, 12%); /* All text */
+    --accent-color: hsl(224, 93%, 58%); /* Buttons */
+    /* End of Colors Styling */
+}
+
+*
+{
+  margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: inherit;
+	color: inherit;
+	list-style: inherit;
+	font-size: inherit;
+	font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+body
+{
+  padding-top: 100px;
+	font-size: var(--text-size);
+	color: var(--primary-color);
+	list-style: none;
+	font-family: var(--text-family);
+	font-weight: 400;
+  line-height: 1.5;
+}
+
+.link
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    padding-bottom: 0.8vmin;
+    color: #3C9F8F;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.link::before
+{
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #3C9F8F;
+    transition: 0.2s ease;
+}
+
+.title
+{
+    font-size: var(--title-size);
+    font-family: var(--title-family);
+    font-weight: 700;
+}
+.subtitle
+{
+    font-size: var(--small-title-size);
+    font-family: var(--title-family);
+    font-weight: 700;
+}
+
+.btn
+{
+    border: 2px solid var(--accent-color);
+    background-color: var(--accent-color);
+    color: white;
+    font-family: var(--title-family);
+    cursor: pointer;
+    padding: 12px 20px;
+    min-width: 32px;
+    border-radius: 5px;
+}
+.btn:hover
+{
+    background-color: transparent;
+    color: var(--accent-color);
+    background-color: white;
+}
+
+.input
+{
+    padding: 1.5vmin 2.5vmin;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
+    color: var(--primary-color);
+}
+
+
+/* Navbar  */
+.navbar
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 4vmin 8vmin;
+    align-items: center;
+    position: fixed;
+    z-index: 99999;
+    background-color: white;
+    top: 0;
+}
+.nav-logo
+{
+    width: 100px;
+    height: 30px;
+}
+.nav-menu
+{
+    display: flex;
+    margin-left: auto;
+}
+.nav-menu li
+{
+    padding: 8px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.nav-menu li:hover
+{
+    color: #585989;
+}
+
+
+/* Header */
+header
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 4vmin 8vmin;
+    margin-bottom: 20vmin;
+}
+.header-info
+{
+    width: 50%;
+    padding: 40px 80px 30px 0;
+}
+.header-info .title, .header-info p
+{
+    margin-bottom: 15px;
+}
+.header-info .input-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+}
+.header-info .input-container > *
+{
+    margin-bottom: 15px;
+}
+.header-input
+{
+    border-color: gray;
+    flex: 1;
+    margin-right: 15px;
+}
+.header-img
+{
+    order: 2;
+    width: 50%;
+}
+@media only screen and (max-width: 900px), (orientation: portrait)
+{
+    header
+    {
+        display: block;
+        margin-bottom: 10vmin;
+    }
+    .header-img
+    {
+        width: 100%;
+        margin-bottom: 6vmin;
+    }
+    .header-info
+    {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    .header-info .title, .header-info p
+    {
+        margin-bottom: 4vmin;
+    }
+    .header-info .input-container
+    {
+        display: block;
+        width: 100%;
+    }
+    .header-input
+    {
+        display: block;
+        margin-bottom: 3vmin;
+        width: 100%;
+    }
+    .header-info .btn
+    {
+        width: 100%;
+    }
+}
+
+
+/* Features Section Start */
+.features
+{
+    padding: 16vmin 8vmin;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-image: url('../img/bg-curve-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+.features-info
+{
+    width: 60%;
+    padding: 8vmin 8vmin 4vmin 0;
+}
+.features-info .title
+{
+    margin-bottom: 4.5vmin;
+}
+.features-info > p
+{
+    width: 75%;
+    margin-bottom: 2vmin;
+}
+.features-info > .link
+{
+    margin-bottom: 6vmin;
+}
+.features-img
+{
+    order: 2;
+    width: 40%;
+}
+@media only screen and (max-width: 900px), (orientation: portrait)
+{
+    .features
+    {
+        display: block;
+    }
+    .features-img
+    {
+        width: 100%;
+        margin-bottom: 6vmin;
+    }
+    .features-info
+    {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    .features-info .title, .features-info p
+    {
+        width: 100%;
+        margin-bottom: 4vmin;
+    }
+    .features-info .link
+    {
+        margin: 0 auto 8vmin;
+    }
+    .features-info .testimonial
+    {
+        margin: 0 auto;
+    }
+}
+/* Features */
+
+/* Comment  */
+.comment
+{
+    text-align: left;
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px;
+    padding: 8px 20px;
+    font-size: var(--small-text-size);
+    line-height: 1.8;
+}
+.comment-quote
+{
+    width: 10px;
+    margin-bottom: 5px;
+}
+.comment-content
+{
+    margin-bottom: 10px;
+}
+.comment-author
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-weight: 900;
+}
+.comment-author p
+{
+    margin-bottom: 2px;
+    flex: 1;
+}
+.comment-author span
+{
+    display: block;
+    font-weight: 400;
+    font-size: 10px;
+}
+.comment-avatar
+{
+    border-radius: 100%;
+    width: 50px;
+    height: 60px;
+    object-fit: cover;
+    object-position: top;
+    margin-right: 20px;
+}
+@media only screen and (max-width: 900px), (orientation: portrait)
+{
+    .comment
+    {
+        width: 200px;
+    }
+}
+/* Comment */
